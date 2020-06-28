@@ -1,5 +1,15 @@
+@charset "UTF-8";
+/*
+    importando o arquivo de base.
+    como ele foi criado com um "_" na frente (os chamados "Partials"), ele
+    só será compilado caso seja importado.
+*/
 body {
   background-color: #7159c1;
   color: orange;
+}
+
+.container p {
+  color: blue;
 }
 /*# sourceMappingURL=main.css.map */
