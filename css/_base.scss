@@ -10,11 +10,9 @@ $text-color: orange;
     // usando condicionais.
     @if $val == danger {
         color: red;
-    }
-    @else if $val == alert {
+    } @else if $val == alert {
         color: yellow;
-    }
-    @else {
+    } @else {
         color: black;
     }
 }
@@ -33,7 +31,7 @@ body {
 
     // variável de escopo
     $text-color: blue;
-    
+
     // encadeamento
     p {
         @include box-shadow(rgba(0, 0, 0, 0.6));
@@ -42,5 +40,23 @@ body {
         width: 100px;
         color: $text-color;
         @include text-effect(none);
+    }
+}
+
+// estrutura de repetição
+@for $i from 1 through 5 {
+    // é possível trocar o "through" por "to". Nesse caso, a variavel iria ser incrementada até o 4.
+    .text-#{$i} {
+        font-size: 15px * $i;
+    }
+}
+
+// um exemplo de coleção de cores.
+$colors: blue, red, yellow;
+
+// usando o foreach.
+@each $color in $colors {
+    .#{$color}-text {
+        color: $color;
     }
 }
