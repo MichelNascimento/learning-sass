@@ -57,6 +57,6 @@ $colors: blue, red, yellow;
 // usando o foreach.
 @each $color in $colors {
     .#{$color}-text {
-        color: $color;
+        color: darken($color, 20);
     }
 }
