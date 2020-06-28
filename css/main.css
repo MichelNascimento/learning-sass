@@ -81,4 +81,13 @@ body {
           align-items: initial;
   height: 100%;
 }
+
+p {
+  color: red;
+  cursor: pointer;
+}
+
+p:hover {
+  color: blue;
+}
 /*# sourceMappingURL=main.css.map */
