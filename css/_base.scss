@@ -1,17 +1,32 @@
 //criação de variáveis
 $text-color: orange;
 
+// criação de um "mixin", que é bem semelhante as funções do JavaScript.
+@mixin box-shadow($color) {
+    box-shadow: 3px 3px 4px 1px $color;
+}
+
 body {
     background-color: #7159c1;
     color: $text-color;
 }
 
 .container {
+    // chamando o "mixin" criado.
+    @include box-shadow(rgba(0, 0, 0, 0.6));
+    width: 200px;
+    height: 200px;
+    background-color: white;
+
     // variável de escopo
     $text-color: blue;
     
     // encadeamento
     p {
+        @include box-shadow(rgba(0, 0, 0, 0.6));
+        background-color: red;
+        height: 100px;
+        width: 100px;
         color: $text-color;
     }
 }
