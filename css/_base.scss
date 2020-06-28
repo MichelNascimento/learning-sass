@@ -60,3 +60,18 @@ $colors: blue, red, yellow;
         color: darken($color, 20);
     }
 }
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    // herança
+    @extend .flex;
+    flex-direction: column;
+    // é possível sobreescrever propriedades.
+    align-items: initial;
+    height: 100%;
+}
